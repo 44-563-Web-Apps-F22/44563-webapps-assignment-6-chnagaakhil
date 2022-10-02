@@ -52,6 +52,18 @@ function resolveForm (){
         <input type="button" class="btn btn-warning" value="Select a vacation" onclick="selectVacation()">
     </form>
     <p id="results">This text will be replaced </p>
+    <br>
+<!--Part 8: Work with the object from the previous part to update a vacation-->
+    <form>
+        <label for="city">Enter a city</label>
+        <input type="text" id="city" name="city" value="city"> <br>
+        
+        <label for="city">Enter price</label>
+        <input type="text" id="price" name="price"> <br>
+    
+        <input type="button" class="btn btn-success" value="Update the vacation" onclick="updateVacation()">
+    </form>
+    <p id="results2">This text will be replaced </p>
 </div>
 <script>
     var my_vacation = {};
@@ -79,6 +91,15 @@ function resolveForm (){
             my_vacation.resort = false;
         }
         document.getElementById("results").innerHTML = JSON.stringify(my_vacation)
+    }
+    function updateVacation()
+    {
+        let city=document.getElementById("city").value;
+        let price=document.getElementById("price").value;
+        my_vacation["city"]=city;
+        my_vacation["price"]=price;
+    
+        document.getElementById("results2").innerHTML=JSON.stringify(my_vacation)
     }
 </script>
 </body>
