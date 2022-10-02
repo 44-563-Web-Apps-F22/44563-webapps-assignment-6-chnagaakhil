@@ -66,5 +66,29 @@ function resolveForm (){
         document.getElementById("results").innerHTML = "Correct guesses are " + correct + " and Wrong guesses are " + wrong
     }
 </script>
+<br>
+<!-- Part 4 : Swapping the images onclicking it. -->
+<div class="container">
+    <img src="Lepidoptera.jpg" width="100px" height="100px" alt="Lepidoptera" id="images" onclick="swapImage()">
+</div>
+<script>
+    let useImage = 1
+    function swapImage(){
+    switch(useImage){
+        case 1:
+            document.getElementById("images").src="Lepidoptera.jpg";
+            useImage+=1;
+            break;
+            case 2:
+            document.getElementById("images").src="HoneyBee.jpg";
+            useImage+=1;
+            break;
+            case 3:
+            document.getElementById("images").src="Cricket.jpg";
+            useImage=1;
+            break;
+        }
+    }
+</script>
 </body>
 </html> 
